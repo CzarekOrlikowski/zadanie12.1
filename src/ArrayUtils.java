@@ -1,16 +1,18 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class ArrayUtils {
 
-    public static TreeSet buildCollection(ArrayList numbers) {
-        TreeSet<Integer> collection = new TreeSet<>(numbers);
-        return collection;
+    public static Set buildSingleNumbers(List numbers) {
+        TreeSet<Integer> singleNumbers = new TreeSet<>(numbers);
+        return singleNumbers;
     }
 
-    public static Result[] compareData(TreeSet collection, ArrayList numbers) {
-        Result[] results = new Result[collection.size()];
-        ArrayList numbersToCheck = new ArrayList<>(collection);
+    public static Result[] createResult(Set singleNumbers, List numbers) {
+        Result[] results = new Result[singleNumbers.size()];
+        ArrayList numbersToCheck = new ArrayList<>(singleNumbers);
 //        System.out.println(numbersToCheck);
 
         for (int i = 0; i < numbersToCheck.size(); i++) {

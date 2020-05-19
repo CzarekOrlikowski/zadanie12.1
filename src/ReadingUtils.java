@@ -1,11 +1,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class ReadingUtils {
 
-    public static ArrayList readNumbers(String fileName) throws FileNotFoundException {
+    public static List<Integer> readNumbers(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
         ArrayList<Integer> numbers = new ArrayList<>();
 
@@ -14,7 +16,6 @@ public class ReadingUtils {
                 String line = scan.nextLine();
                 numbers.add(Integer.parseInt(line));
             }
-            scan.close();
         } catch (FileNotFoundException e) {
             System.err.println("Brak pliku!");
         }
