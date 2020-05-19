@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class ReadingUtils {
 
     public static ArrayList readNumbers(String fileName) throws FileNotFoundException {
-        fileName = "C:\\Pliki Czarek\\JAVASTART\\zadanie12.1\\src\\dane.txt";
         File file = new File(fileName);
         ArrayList<Integer> numbers = new ArrayList<>();
 
